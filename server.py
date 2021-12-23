@@ -130,6 +130,7 @@ def authenticate_complete():
         signature,
     )
     print("ASSERTION OK")
+    print("Authenticated to "+str(request.remote_addr))
     return cbor.encode({"status": "OK"})
 
 
